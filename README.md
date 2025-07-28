@@ -4,7 +4,7 @@ This repository contains security audit findings for the Superform Core project,
 
 ## Findings
 
-### 1. Merkle Leaf Mismatch in SuperDestinationValidator Leads to Rejection of README-Compliant Messages
+## 1. Merkle Leaf Mismatch in SuperDestinationValidator Leads to Rejection of README-Compliant Messages
 # [Info](https://cantina.xyz/competitions/ba62fa4e-f933-4eec-b9ac-868325f4a694) Severity
 The `SuperDestinationValidator.sol` contract calculates Merkle leaves using a structure that omits the adapter address and uses global signature expiry, which mismatches the README.md's implied leaf structure. This discrepancy causes valid messages constructed per README documentation to be rejected with an `INVALID_PROOF` error.
 
